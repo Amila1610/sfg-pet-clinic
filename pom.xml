@@ -4,7 +4,7 @@
 
 	<groupId>guru.springframework</groupId>
 	<artifactId>sfg-pet-clinic</artifactId>
-	<version>0.0.4-SNAPSHOT</version>
+	<version>0.0.4</version>
 
 	<packaging>pom</packaging>
 
@@ -24,9 +24,11 @@
 	</parent>
 
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<!--<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>-->
 		<java.version>1.8</java.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
 	<build>
@@ -43,15 +45,21 @@
 				<version>3.0.0-M6</version>
 				<configuration>
 					<goals>install</goals>
-					<!--<autoVersionSubmodules>true</autoVersionSubmodules>-->
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+
+					<checkModificationExcludes>
+					<checkModificationExclude>pom.xml</checkModificationExclude>
+					</checkModificationExcludes>
+
 				</configuration>
+
 			</plugin>
 		</plugins>
 	</build>
 
 	<scm>
 		<developerConnection>scm:git:https://github.com/Amila1610/sfg-pet-clinic.git</developerConnection>
-	  <tag>sfg-pet-clinic-0.0.3</tag>
+	  <tag>sfg-pet-clinic-0.0.4</tag>
   </scm>
 
 </project>
